@@ -10,5 +10,116 @@
   <script>
     let a =100
   </script>
+<<<<<<< HEAD
+=======
+克隆本地测试
+
+  # ==========创建.gitignore文件==========
+  # 创建版本忽略文件
+  type null > .gitignore
+  # 使用记事本编辑该文件
+  notepad .gitignore
+  # 忽略node_modules下的全部内容
+  node_modules
+  node_modules/**
+  #======================================
+
+  $ git comfig --global user.name 'paopaowang3'
+
+
+  # ==========第一次提交==================
+  # 初始化本地仓库
+  git init
+  # 添加文件到缓存区
+  git add pages/index.html
+  # 添加全部到缓存区
+  git add .
+  # 将缓存区中的全部内容提交到本地仓库，并附上日志（就会形成一个历史版本）
+  git commit -m "the first commit"
+  # =====================================
+
+git init
+
+  # =====清除缓存区中的内容并重新提交=====
+  # 清除所有已经添加到缓存区的内容
+
+  # 添加所有文件到缓存区
+  git add .
+  # 提交
+  git commit -m 'update .gitignore'
+  # ====================================
+
+  https://git-scm.com/
+
+
+  # ==========版本回退===============================================
+  # 版本日志(每次本地提交commit -m "xxx")
+  git log
+  # 操作日志（每一次git操作）每个版本的快照id是完全相同的
+  git reflog
+  # 项目整体回退到某个历史版本
+  git reset --hard fcc22134c906e0fa1c1ae3c09d105a0c1ddeadd3
+  # 单个文件回退（会把该文件的对应版本丢在缓冲区）
+  git reset fcc22134c906e0fa1c1ae3c09d105a0c1ddeadd3 -- css/zqd.css
+  # 从缓存区中检出文件
+  git checkout css/zqd.css
+  # =================================================================
+
+
+
+
+
+  # ==========开辟分支==========
+  # 开辟一个名为steve的新分支
+  git branch steve
+  git branch dev
+  # 查看全部分支
+  git branch
+  # 切换到一个分支
+  git checkout steve
+  # 删除分支
+  git branch -d bastard
+  # 将steve分支合并到当前分支
+  git merge steve
+  #============================
+
+
+
+
+  # ==========向远程仓库推送=======================================
+  # 添加远程仓库地址
+  git remote add origin https://gitee.com/ouyang-suo/myshop.git
+  # 第一次向远程仓库的master分支上推送（需要输入用户名和密码）
+  git push -u origin master
+  # 后续推送将不再需要输入用户名和密码
+  git push
+  # ==============================================================
+
+
+
+
+
+  # ==========克隆与下拉==============================
+  # 克隆远程仓库到本地，形成一个本地仓库（是否有push的权限取决于你是否属于项目的开发者）
+  git clone https://gitee.com/ouyang-suo/myshop.git
+  # 拉取工程的实时更新（会覆盖本地的全部修改，当心！）
+  git pull
+  # =================================================
+
+
+
+
+  # ==========解决冲突====================
+  # 从远程获取主干分支的最新内容，并临时存储为一个新的分支tmp
+  git fetch origin master:tmp
+  # 对比当前分支与tmp的区别
+  git diff tmp
+  # 将tmp分支合并到当前分支（可能会爆发冲突）
+  git merge tmp
+  # 如果冲突爆发，确定冲突内容的最终状态，将冲突标记删除，重新add,commit,push
+  # ======================================
+
+
+>>>>>>> aa
 </body>
 </html>
